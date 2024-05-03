@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "../../public/Components/Navbar";
 import useCincuStore from "@/store/useCincu";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,15 +45,18 @@ export default function Home() {
           <Image
             className={styles.logo}
             src="/images/imgccc.png"
-            alt="Next.js Logo"
-            width={270}
+            alt="photo of the site owner"
+            width={200}
             height={100}
             priority
           />
           <p className={styles.intro}>
-            Hello! I'm {cincu.name.substring(6, 11)}. here is an intro&nbsp;
+            Welcome! I'm {cincu.name.substring(6, 11)}.&nbsp;
           </p>
-          <p>{highlightText(info, wordsToHighLight)}</p>
+          <p>
+            {highlightText(info, wordsToHighLight)}{" "}
+            <Link href="./about">Click for more </Link>
+          </p>
         </div>
       </main>
     </>

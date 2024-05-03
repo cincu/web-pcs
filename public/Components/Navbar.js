@@ -1,35 +1,43 @@
 import styles from "@/styles/Home.module.css";
-
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { ChevronLeftIcon } from "@chakra-ui/icons";
 export default function Navbar() {
+  const router = useRouter();
+  function isActive(path) {
+    return router.pathname === path ? styles.active : "";
+  }
+  function isHome(path) {
+    return router.pathname === "/";
+  }
   return (
     <div className={styles.grid}>
-      <a href="./about" className={styles.card}>
+      {!isHome() && (
+        <Link className={styles.button} href="/">
+          <ChevronLeftIcon />
+        </Link>
+      )}
+      <Link className={`${styles.card} ${isActive("/about")}`} href="./about">
         <h2>
           About <span>-&gt;</span>
         </h2>
-      </a>
-
-      <a
-        href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        className={styles.card}
-        target="_blank"
-        rel="noopener noreferrer"
+      </Link>
+      <Link
+        className={`${styles.card} ${isActive("/projects")}`}
+        href="./projects"
       >
         <h2>
           Projects <span>-&gt;</span>
         </h2>
-      </a>
-
-      <a
-        href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        className={styles.card}
-        target="_blank"
-        rel="noopener noreferrer"
+      </Link>
+      <Link
+        className={`${styles.card} ${isActive("/contact")}`}
+        href="./contact"
       >
         <h2>
           Contact <span>-&gt;</span>
         </h2>
-      </a>
+      </Link>
     </div>
   );
 }
