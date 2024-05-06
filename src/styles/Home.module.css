@@ -1,12 +1,14 @@
 .cards {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  min-width: 200px;
 }
 .main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   padding: 3rem;
   min-height: 100vh;
 }
@@ -60,9 +62,17 @@
   width: 100%;
 }
 .accordion {
-  width: 100%;
-  max-width: 700px;
+  width: 60%;
+
   /* box-sizing: border-box; */
+}
+.long {
+  font-size: 0.85rem;
+  width: 60%;
+}
+.requestButton {
+  position: fixed;
+  width: 60%;
 }
 .card {
   padding: 1rem 1.2rem;

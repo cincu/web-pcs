@@ -6,31 +6,37 @@ import {
   AccordionIcon,
   Box,
 } from "@chakra-ui/react";
+import { CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import useCincuStore from "@/store/useCincu";
 export default function Cv() {
   const { about, cincu } = useCincuStore();
   const long = cincu.long;
+  function getProgressValue(language) {
+    switch (language.toLowerCase()) {
+      case "turkish":
+      case "english":
+        return 100;
+      case "german":
+        return 50;
+      case "italian":
+        return 40;
+      default:
+        return 10; // Default value if none of the cases match
+    }
+  }
   return (
     <>
+      {cincu.long.map((long, index) => (
+        <p key={index} className={styles.long}>
+          {long}
+        </p>
+      ))}
       <Accordion className={styles.accordion} defaultIndex={[0]} allowMultiple>
         <AccordionItem>
           <h2>
-            <AccordionButton>
-              <Box as="span" flex="1" textAlign="left">
-                Read me{" "}
-              </Box>
-              <AccordionIcon />
-            </AccordionButton>
-          </h2>
-          <AccordionPanel pb={4}>
-            <p>{long}</p>
-          </AccordionPanel>
-        </AccordionItem>
-        <AccordionItem>
-          <h2>
-            <AccordionButton>
+            <AccordionButton _expanded={{ bg: "grey", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 Education
               </Box>
@@ -48,7 +54,7 @@ export default function Cv() {
 
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton _expanded={{ bg: "grey", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 Experience
               </Box>
@@ -65,7 +71,7 @@ export default function Cv() {
         </AccordionItem>
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton _expanded={{ bg: "grey", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 Languages
               </Box>
@@ -74,15 +80,22 @@ export default function Cv() {
           </h2>
           <AccordionPanel pb={4}>
             <ul>
-              {about.languages.map((languages, index) => (
-                <li key={index}>{languages}</li>
+              {about.languages.map((language, index) => (
+                <li key={index}>
+                  {language}
+                  <CircularProgress
+                    style={{ padding: "2rem", right: "1rem" }}
+                    value={getProgressValue(language)}
+                    size="1.4rem"
+                  />
+                </li>
               ))}
             </ul>
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton _expanded={{ bg: "grey", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 Voluntary
               </Box>
@@ -100,7 +113,7 @@ export default function Cv() {
 
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton _expanded={{ bg: "grey", color: "white" }}>
               <Box as="span" flex="1" textAlign="left">
                 References
               </Box>
