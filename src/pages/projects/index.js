@@ -14,10 +14,7 @@ export default function Projects() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Navbar />
-
-        <div className={styles.cards}>
-          <Cards />
-        </div>
+        <Cards />
       </main>
     </div>
   );
