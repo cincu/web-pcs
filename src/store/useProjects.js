@@ -6,6 +6,7 @@ const useProjectsStore = create((set, get) => ({
       id: 1,
       title: "Awareness",
       background: "/images/id1.png",
+      banner: "/images/banner1.png",
       tags: [
         "sensitive data",
         "corporate security",

@@ -35,12 +35,7 @@ export default function Cards() {
             <Text>{project.subtitle}</Text>
           </CardBody>
           <CardFooter>
-            <Button
-              project={project}
-              as="a"
-              href={`/projects/${project.id}`}
-              target="_blank"
-            >
+            <Button project={project} as="a" href={`/projects/${project.id}`}>
               View here
             </Button>{" "}
           </CardFooter>
