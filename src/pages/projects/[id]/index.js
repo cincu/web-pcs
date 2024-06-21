@@ -6,30 +6,47 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 import Navbar from "@/../../public/Components/Navbar";
+import { useEffect, useState } from "react";
+import { Spinner, Text } from "@chakra-ui/react";
 
 export default function ProjectDetailPage() {
   const { getProjectById } = useProjectsStore();
   const router = useRouter();
   const { id } = router.query;
-  console.log("Router Project ID:", id);
-  const project = getProjectById(Number(id));
-  console.log("Fetched Project:", project); // Check what project data is fetched
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (id) {
+      const projectId = parseInt(id, 10);
+
+      if (!isNaN(projectId)) {
+        const fetchedProject = getProjectById(projectId);
+        setProject(fetchedProject);
+      }
+      setLoading(false);
+    }
+  }, [id, getProjectById]);
+
+  if (loading) {
+    return <Spinner />;
+  }
+
+  if (!project) {
+    return <Text>Project not found</Text>;
+  }
 
   return (
     <>
-      {project ? (
-        <div>
-          <Head>
-            <title> oiloʇɟᴙoq </title>
-          </Head>
-          <main className={`${styles.main} ${inter.className}`}>
-            <Navbar />
-            <Post project={project} />
-          </main>
-        </div>
-      ) : (
-        <p>Project not found</p>
-      )}
+      <div>
+        <Head>
+          <title>oiloʇɟᴙoq</title>
+        </Head>
+        <main className={`${styles.main} ${inter.className}`}>
+          <Navbar />
+          <Post project={project} />
+        </main>
+      </div>
     </>
   );
 }
