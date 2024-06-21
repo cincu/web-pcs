@@ -1,15 +1,26 @@
+// components/Post.js
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
-import { Heading } from "@chakra-ui/react";
-import { Badge, Stack } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/react";
-import ProjectOne from "./ProjectOne";
+import { Heading, Badge, Stack, Text } from "@chakra-ui/react";
+import ProjectAwareness from "./ProjectAwareness";
+import ProjectPhish from "./ProjectPhish";
+import ProjectFlag from "./ProjectFlag";
 
 export default function Post({ project }) {
   if (!project) {
     return <p>No project data available!</p>;
   }
-
+  const renderProjectComponent = (title) => {
+    if (title.includes("Awareness")) {
+      return <ProjectAwareness />;
+    } else if (title.includes("Sazan")) {
+      return <ProjectPhish />;
+    } else if (title.includes("Flag")) {
+      return <ProjectFlag />;
+    } else {
+      return null;
+    }
+  };
   console.log(project);
   return (
     <div className={styles.postContainer}>
@@ -20,12 +31,19 @@ export default function Post({ project }) {
         src={project.banner}
         alt={project.title}
       />
-      <br></br>
-      <Heading as="h4" size="md">
+      <br />
+      <Heading
+        className={styles.projectHeading}
+        as="h2"
+        size="xl"
+        noOfLines={1}
+      >
         Project {project.title}
       </Heading>
-      <p>Security awareness in corporate culture, {project.date}</p>
-      <br></br>
+      <Text className={styles.leftAlignedText}>
+        {project.subtitle}, {project.date}
+      </Text>
+      <br />
       <Stack direction="row">
         {project.tags.map((tag, index) => (
           <Badge key={index} colorScheme={getColorScheme(index)}>
@@ -33,16 +51,20 @@ export default function Post({ project }) {
           </Badge>
         ))}
       </Stack>
-      <br></br>
-      <Text as="i">{project.reference}</Text>
-      <Heading as="h4" size="md">
+      <br />
+      <Text as="i" className={styles.leftAlignedText}>
+        {project.reference}
+      </Text>
+      <Heading as="h3" size="lg" className={styles.projectSubtitle}>
         Why is this topic relevant?
       </Heading>
-      <Text>{project.intro}</Text>
-      <ProjectOne></ProjectOne>
+      <Text className={styles.leftAlignedText}>{project.intro}</Text>
+      <br></br>
+      {renderProjectComponent(project.title)}
     </div>
   );
 }
+
 function getColorScheme(index) {
   const colorSchemes = ["green", "red", "purple", "blue", "orange"];
   return colorSchemes[index % colorSchemes.length];

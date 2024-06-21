@@ -19,7 +19,7 @@ const useProjectsStore = create((set, get) => ({
       reference:
         "https://www.darkreading.com/cloud-security/aws-ciso-cloud-customers-need-secure-ai-workloads",
       intro:
-        "In 2024, the digital landscape is evolving at an unprecedented pace, with artificial intelligence (AI) tools becoming increasingly integral to corporate operations across various industries. While AI brings immense potential for efficiency and innovation, it also introduces new challenges, particularly concerning the protection of sensitive information and the prevention of data leaks.",
+        "In 2024, the digital landscape is evolving at an unprecedented pace, with artificial intelligence (AI) tools becoming increasingly integral to corporate operations across various industries. While AI brings immense potential for efficiency and innovation, it also introduces new challenges, particularly concerning the protection of sensitive information and the prevention of data leaks.Against this backdrop, educating corporate workers on safeguarding sensitive information when using AI tools is not just important; it's absolutely paramount.",
       text: "",
       list: "",
       subtext: "",
@@ -31,9 +31,10 @@ const useProjectsStore = create((set, get) => ({
       id: 2,
       title: "Sazan Avi",
       background: "/images/id2.png",
+      banner: "/images/banner2.png",
       tags: ["e-mail phishing", "MFA Bypass", "SMS phishing", "evilginx"],
       subtitle:
-        "The phishing server aims to explore different means for different phishing campaigns using various social engineering methods.",
+        "The phishing server aims to explore different means for different phishing campaigns using various social engineering methods",
       date: "04.2024",
       reference: [
         "[GoPhish repo](https://github.com/gophish/gophish)",
@@ -41,29 +42,28 @@ const useProjectsStore = create((set, get) => ({
         "[Evilginx2 repo](https://github.com/kgretzky/evilginx2)",
       ],
       intro: [
-        "Tools and services used in this project:",
-        "Mailgun for mail server",
-        "GoDaddy for domain registration and dns record configuration",
-        "Google Cloud Platform (Compute Engine) for building a server with VM tools",
-        "Linux system",
-        "SSH to connect to phishing server (sazan.avi)",
-        "Certbot for generating certificates",
+        "Phishing attacks are one of the most significant threats in cybersecurity today, tricking people into revealing sensitive information like passwords and financial details. This project involves configuring a phishing server to understand the mechanics of these attacks, which is crucial for enhancing our defenses against them. By creating realistic phishing scenarios, we can train employees to better recognize and respond to phishing attempts, significantly reducing the risk of successful attacks. By doing this project, I know what's happening under the hood of a phishing attack, providing valuable insights to strengthen our security measures. This project underscores the importance of continuous education and hands-on training in fostering a security-aware culture, ultimately protecting organizations from evolving cyber threats.",
       ],
     },
     {
       id: 3,
       title: "Capture the Flag",
       background: "/images/id3.png",
+      banner: "/images/banner3.png",
       tags: ["Linux", "Encryption", "Hashing", "File Systems"],
       subtitle:
-        "The write-up collects steps and tricks used to tackle the CTF room that is developed to explore Linux environments in depth.",
+        "The write-up collects steps and tricks used to tackle the CTF room that is developed to explore Linux environments in depth",
       date: "04.2024",
+      intro: [
+        "Participating in a Linux Capture the Flag (CTF) task is a crucial exercise for anyone looking to improve their cybersecurity skills. This task helps you become proficient in navigating the Linux environment, uncovering hidden flags, and using hash functions for data verification. It also covers the basics of encryption, providing practical knowledge for protecting sensitive information. This hands-on experience is essential for preparing to tackle real-world cybersecurity challenges.",
+      ],
     },
-
     {
       id: 4,
       title: "Nessus Scan",
       background: "/images/id4.png",
+      banner: "/images/banner4.png",
+
       tags: [
         "Vulnerability Scan",
         "Threat Assessment",
@@ -71,13 +71,15 @@ const useProjectsStore = create((set, get) => ({
         "Compliance Checks",
       ],
       subtitle:
-        "The write-up 'Vulnerability Scan' is a beginner's guide to set-up, utilize and analyze the results of the powerful tool Nessus.",
+        "The write-up 'Vulnerability Scan' is a beginner's guide to set-up, utilize and analyze the results of the powerful tool Nessus",
       date: "04.2024",
     },
     {
       id: 5,
       title: "Nmap Notes",
       background: "/images/id5.png",
+      banner: "/images/banner5.png",
+
       tags: [
         "network scanning",
         "port scanning",
@@ -86,7 +88,7 @@ const useProjectsStore = create((set, get) => ({
         "nmap scripts",
       ],
       subtitle:
-        "The extensive notes on the crucial tool for network security; Network Mapper aim to gather different use-cases.",
+        "The extensive notes on the crucial tool for network security; Network Mapper aim to gather different use-cases",
       date: "04.2024",
     },
   ],
