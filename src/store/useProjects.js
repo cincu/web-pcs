@@ -50,7 +50,7 @@ const useProjectsStore = create((set, get) => ({
       title: "Capture the Flag",
       background: "/images/id3.png",
       banner: "/images/banner3.png",
-      tags: ["Linux", "Encryption", "Hashing", "File Systems"],
+      tags: ["Linux", "Encryption", "Hashing", "File Systems", "NMAP"],
       subtitle:
         "The write-up collects steps and tricks used to tackle the CTF room that is developed to explore Linux environments in depth",
       date: "04.2024",

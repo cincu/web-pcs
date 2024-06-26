@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 export default function ProjectPhish() {
   return (
-    <div>
+    <div className={styles.leftAlignedText}>
       <ul>
         <Heading as="h4" size="md" className={styles.projectSubtitle}>
           Tools and services used in this project:
@@ -30,7 +30,6 @@ export default function ProjectPhish() {
           [Evilginx2 repo](https://github.com/kgretzky/evilginx2)
         </li>
       </ul>
-      <br></br>
       <Heading as="h4" size="md" className={styles.projectSubtitle}>
         Preparation
       </Heading>
@@ -64,7 +63,6 @@ export default function ProjectPhish() {
         </li>
         <li>NS record (Contains info about nameservers).</li>
       </ul>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -72,12 +70,9 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_1.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">
         A screenshot of the DNS records in GoDaddy DNS management page.
       </Text>
-      <br></br>
-      <br></br>
       <p>
         Some of these records are already provided. Some were edited and updated
         in various steps. Initially the first A record is to reach the GoDaddy
@@ -86,7 +81,6 @@ export default function ProjectPhish() {
         Multiple A records are added for subdomains such as academy.cincuks.de,
         m.cincuks.de, login.cincuks.de and such.
       </p>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -94,12 +88,9 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_2.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">
         A screenshot of MX records that are set up with mailgun.{" "}
       </Text>
-      <br></br>
-      <br></br>
       <ol>
         It’s good to know that DNS records are crucial in phishing campaigns
         primarily for two reasons:
@@ -123,7 +114,6 @@ export default function ProjectPhish() {
         After adding the domain to the mailgun account, DNS MX records were
         populated in GoDaddy via values taken from mailgun. #SPF #DKIM #MX
       </ol>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -131,10 +121,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_3.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the verified records in mailgun. </Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -142,12 +129,9 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_4.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">
         A screenshot of the set SMTP credentials in mailgun.{" "}
       </Text>
-      <br></br>
-      <br></br>
       <Heading as="h5" size="sm" className={styles.projectSubtitle}>
         Google Cloud
       </Heading>
@@ -157,11 +141,9 @@ export default function ProjectPhish() {
         the properties of the machine will affect the cost of the cloud
         instance.
         <br></br>Name:sazan-avi Region:Europe-west10(Berlin)
-        <br></br>
         Zone:Europe-west10-a, Machine Type: e-micro(2 vCPU, 1 core, 1GB memory)
         <br></br> Firewall: allowing HTTPS and HTTP traffic
       </p>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -169,16 +151,12 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_5.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the VM instance on Google Cloud. </Text>
-      <br></br>
-      <br></br>
       <p>
         In order to connect with SSH from my device, I generated an SSH key pair
         from my terminal using this command:
       </p>
-      <br></br>
-      <Text as="mark">
+      <Text className={styles.highlightedCode}>
         $ ssh-keygen -t rsa -f ~/.ssh/gcp_vm -C your_email@example.com
       </Text>
       <p>
@@ -194,9 +172,9 @@ export default function ProjectPhish() {
         purchased by GoDaddy, which is done through setting up the A record’s
         value as the external IP address of the vm instance.
       </p>{" "}
-      <br></br>
-      <Text as="mark">$ ssh -i ~/.ssh/gcp_vm canancansucaner@34.32.61.190</Text>
-      <br></br>
+      <Text className={styles.highlightedCode}>
+        $ ssh -i ~/.ssh/gcp_vm canancansucaner@34.32.61.190
+      </Text>
       <Image
         height={800}
         width={800}
@@ -204,12 +182,9 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_6.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">
         A screenshot of the firewall rules on the virtual machine.
       </Text>
-      <br></br>
-      <br></br>
       <p>
         Throughout the project I’ve updated the DNS records and firewall rules
         multiple time. Screenshots are from the final version. Initially the IP
@@ -227,13 +202,9 @@ export default function ProjectPhish() {
         This allows me to clone the github repository using git clone in the
         command line with the https url.
       </p>{" "}
-      <br></br>
-      <Text as="mark">$ golang-go build</Text>
-      <br></br>
+      <Text className={styles.highlightedCode}>$ golang-go build</Text>
       <p>Login to the admin panel and navigate to</p>
-      <br></br>
-      <Text as="mark">$ https://cincuks.de:3333</Text>
-      <br></br>
+      <Text className={styles.highlightedCode}>$ https://cincuks.de:3333</Text>
       <p>Now the public IP address:3333 should be outputting the GoPhish. </p>
       <Image
         height={800}
@@ -246,15 +217,15 @@ export default function ProjectPhish() {
         TLS certificate
       </Heading>
       <p>
-        To create a realistic and secure phishing simulation, it's essential to
-        use TLS certificates from Let's Encrypt for HTTPS connections, ensuring
-        the communication is encrypted. This step makes the simulation more
-        believable and safeguards data. The setup involves setting up firewall
-        settings in Google Cloud for HTTPS and opening new ports, getting
-        certificates with Certbot through DNS validation, and incorporating
-        these into Gophish. Adjusting Gophish to use HTTPS and these
-        certificates makes the simulation resemble secure websites, offering a
-        credible and protected environment.
+        To create a realistic and secure phishing simulation, it&apos;s
+        essential to use TLS certificates from Let&apos;s Encrypt for HTTPS
+        connections, ensuring the communication is encrypted. This step makes
+        the simulation more believable and safeguards data. The setup involves
+        setting up firewall settings in Google Cloud for HTTPS and opening new
+        ports, getting certificates with Certbot through DNS validation, and
+        incorporating these into Gophish. Adjusting Gophish to use HTTPS and
+        these certificates makes the simulation resemble secure websites,
+        offering a credible and protected environment.
       </p>
       <Image
         height={800}
@@ -263,28 +234,27 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_8.png"
         alt="image"
       />
-      <Text as="mark">$ sudo apt install certbot</Text>
-      <br></br>
-      <Text as="mark">
+      <Text className={styles.highlightedCode}>$ sudo apt install certbot</Text>
+      <Text className={styles.highlightedCode}>
         $ sudo certbot certonly -d domain --manual --preferred-challenges dns
       </Text>
-      <br></br>
-      <Text as="mark">
+      <Text className={styles.highlightedCode}>
         $ sudo cp /etc/letsencrypt/live/mydomain.com/privkey.pem
         mycert_privkey.pem
       </Text>
-      <br></br>
-      <Text as="mark">
+      <Text className={styles.highlightedCode}>
         $ sudo cp /etc/letsencrypt/live/mydomain.com/fullchain.pem
         mycert_fullchain.pem
       </Text>
-      <br></br>
-      <Text as="mark">$ nano /home/ubuntu/gophish/config.json</Text>
-      <br></br>
-      <Text as="mark">$ sudo systemctl stop gophish.service</Text>
-      <br></br>
-      <Text as="mark">$ sudo systemctl start gophish.service</Text>
-      <br></br>
+      <Text className={styles.highlightedCode}>
+        $ nano /home/ubuntu/gophish/config.json
+      </Text>
+      <Text className={styles.highlightedCode}>
+        $ sudo systemctl stop gophish.service
+      </Text>
+      <Text className={styles.highlightedCode}>
+        $ sudo systemctl start gophish.service
+      </Text>
       <p>
         From here on, I started playing around the GoPhish tool. After setting
         up email sending profile and adding an email template, I am almost ready
@@ -297,10 +267,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_9.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the the sending profile in GoPhish.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -308,10 +275,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_10.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the Email template in html.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -319,10 +283,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_11.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of new campaign.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -330,10 +291,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_12.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the email.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -341,10 +299,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_13.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the login page.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -352,10 +307,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_14.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the first phishing e-mail sent.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -363,10 +315,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_15.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the dashboard.</Text>
-      <br></br>
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -374,10 +323,7 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_16.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">A screenshot of the progress of the phishing mail.</Text>
-      <br></br>
-      <br></br>
       <UnorderedList styleType="'+'">
         To sum up the GoPhish setup:
         <ListItem> creating a domain</ListItem>
@@ -406,13 +352,10 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_17.png"
         alt="image"
       />
-      <br></br>
       <Text as="cite">
         A screenshot of the progress of the phishing landing page mimicking
         O365.
       </Text>
-      <br></br>
-      <br></br>
       <Heading as="h5" size="sm" className={styles.projectSubtitle}>
         Steps to harden the server
       </Heading>
@@ -424,22 +367,21 @@ export default function ProjectPhish() {
           I run commands to replace specific Gophish HTTP header values, making
           the server less recognizable:{" "}
         </li>
-        <Text as="mark">
-          $ find . -type f -exec sed -i.bak 's/X-Gophish-Contact/X-Contact/g' {}{" "}
-          +
-        </Text>
-        <br></br>
-        <Text as="mark">
+        <Text className={styles.highlightedCode}>
           $ find . -type f -exec sed -i.bak
-          's/X-Gophish-Signature/X-Signature/g' {} +{" "}
+          &apos;s/X-Gophish-Contact/X-Contact/g&apos; {} +
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ find . -type f -exec sed -i.bak
+          &apos;s/X-Gophish-Signature/X-Signature/g&apos; {} +{" "}
         </Text>
         <li>
           To make tracking links in emails less obvious, I change the query
           parameter used by Gophish:
         </li>
-        <Text as="mark">
-          $ sed -i 's/const RecipientParameter = "rid"/const RecipientParameter
-          = "identifier"/g' models/campaign.go
+        <Text className={styles.highlightedCode}>
+          $ sed -i &apos;s/const RecipientParameter = "rid"/const
+          RecipientParameter = "identifier"/g&apos; models/campaign.go
         </Text>
         <Image
           height={800}
@@ -448,7 +390,6 @@ export default function ProjectPhish() {
           src="/images/Phish/PSA_18.png"
           alt="image"
         />
-        <br></br>
         <Image
           height={800}
           width={800}
@@ -456,44 +397,50 @@ export default function ProjectPhish() {
           src="/images/Phish/PSA_19.png"
           alt="image"
         />
-        <br></br>
         <li>
-          To further disguise the server's identity, I edit the configuration to
-          ignore the server name:
+          To further disguise the server&apos;s identity, I edit the
+          configuration to ignore the server name:
         </li>
-        <Text as="mark">$ nano /home/ubuntu/gophish/config/config.json</Text>
+        <Text className={styles.highlightedCode}>
+          $ nano /home/ubuntu/gophish/config/config.json
+        </Text>
         <li>
           Then, if I forget the admin password for Gophish, I reset it using
           sqlite3, ensuring I can always access my Gophish dashboard:
         </li>
-        <Text as="mark">
-          $ sudo apt install sqlite3 sqlite3 gophish.db 'update users set
+        <Text className={styles.highlightedCode}>
+          $ sudo apt install sqlite3 sqlite3 gophish.db &apos;update users set
           hash="$2a$10$IYkPp0.QsM81lYYPrQx6W.U6oQGw7wMpozrKhKAHUBVL4mkm/EvAS"
-          where username="admin";'
+          where username="admin";&apos;
         </Text>
         <li>
           For security, I install Certbot and generate TLS certificates to
           secure the phishing server with HTTPS, a crucial step for authentic
           simulations:
-          <br></br>
         </li>
-        <Text as="mark">$ sudo apt install certbot</Text>
-        <Text as="mark">
+        <Text className={styles.highlightedCode}>
+          $ sudo apt install certbot
+        </Text>
+        <Text className={styles.highlightedCode}>
           $ sudo certbot certonly -d domain--manual --preferred-challenges dns
         </Text>
         <li>
           After securing the server and ensuring I have administrative access, I
           restart the Gophish service to apply all changes:
-          <br></br>
         </li>
-        <Text as="mark">$ sudo systemctl stop gophish.service</Text>
-        <Text as="mark">$ sudo systemctl restart gophish.service</Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo systemctl stop gophish.service
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo systemctl restart gophish.service
+        </Text>
         <p>
-          These commands collectively enhance the Gophish server's security and
-          operational stealth, contribute to the campaign's credibility, and
-          maintain easy management access. This careful setup helps mimic
-          real-world phishing attacks within a controlled and ethical framework,
-          aiming to educate about phishing defense mechanisms.
+          These commands collectively enhance the Gophish server&apos;s security
+          and operational stealth, contribute to the campaign&apos;s
+          credibility, and maintain easy management access. This careful setup
+          helps mimic real-world phishing attacks within a controlled and
+          ethical framework, aiming to educate about phishing defense
+          mechanisms.
         </p>
       </ul>
       <Heading as="h4" size="md" className={styles.projectSubtitle}>
@@ -513,7 +460,6 @@ export default function ProjectPhish() {
         the Gophish configuration to prevent port conflicts, specifically moving
         Gophish off port 443, which Evilginx will use.
       </p>
-      <br></br>
       <p>
         Running Evilginx in a dedicated tmux session allows it to persistently
         capture traffic, with configurations set for domain and external IP to
@@ -540,30 +486,37 @@ export default function ProjectPhish() {
           alt="image"
         />
 
-        <br></br>
         <li>DNS Configuration</li>
-        <Text as="mark">$ sudo lsof -i :53</Text>
-        <br></br>
-        <Text as="mark">$ sudo systemctl stop systemd-resolved.service</Text>
-        <br></br>
-        <Text as="mark">$ sudo rm /etc/resolv.conf</Text>
-        <br></br>
-        <Text as="mark">$ sudo nano /etc/resolv.conf</Text>
+        <Text className={styles.highlightedCode}>$ sudo lsof -i :53</Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo systemctl stop systemd-resolved.service
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo rm /etc/resolv.conf
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo nano /etc/resolv.conf
+        </Text>
         <li>Adjust Gophish and Run Evilginx</li>
-        <Text as="mark">$ sudo nano /home/ubuntu/gophish/config.json</Text>
-        <br></br>
-        <Text as="mark">$ sudo systemctl stop gophish.service</Text>
-        <br></br>
-        <Text as="mark">$ sudo systemctl start gophish.service</Text>
-        <br></br>
-        <Text as="mark">$ tmux</Text>
-        <br></br>
-        <Text as="mark">$ sudo ./evilginx2</Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo nano /home/ubuntu/gophish/config.json
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo systemctl stop gophish.service
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ sudo systemctl start gophish.service
+        </Text>
+        <Text className={styles.highlightedCode}>$ tmux</Text>
+        <Text className={styles.highlightedCode}>$ sudo ./evilginx2</Text>
 
         <li>Configure Evilginx</li>
-        <Text as="mark">$ config domain cincuks.de</Text>
-        <br></br>
-        <Text as="mark">$ config ipv4 external PublicIpOfPhishingServer</Text>
+        <Text className={styles.highlightedCode}>
+          $ config domain cincuks.de
+        </Text>
+        <Text className={styles.highlightedCode}>
+          $ config ipv4 external PublicIpOfPhishingServer
+        </Text>
       </ul>
       <p>
         Setting Up Domains for PhishletsEnsure firewall rules are adjusted as
@@ -579,7 +532,6 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_24.png"
         alt="image"
       />
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -587,7 +539,6 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_25.png"
         alt="image"
       />
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -595,7 +546,6 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_26.png"
         alt="image"
       />
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -603,7 +553,6 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_27.png"
         alt="image"
       />
-      <br></br>
       <Image
         height={800}
         width={800}
@@ -611,16 +560,14 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_28.png"
         alt="image"
       />
-      <br></br>
       <Heading as="h5" size="sm" className={styles.projectSubtitle}>
         Protecting Evilginx
       </Heading>
-      <Text as="mark">$ blacklist unauth</Text>
-      <br></br>
-      <Text as="mark">$ $ blocklist all</Text>
-      <br></br>
-      <Text as="mark">$ $ config unauth_url redirectURL</Text>
-      <br></br>
+      <Text className={styles.highlightedCode}>$ blacklist unauth</Text>
+      <Text className={styles.highlightedCode}>$ $ blocklist all</Text>
+      <Text className={styles.highlightedCode}>
+        $ $ config unauth_url redirectURL
+      </Text>
       <Heading as="h4" size="md" className={styles.projectSubtitle}>
         Setting up EvilPhish
       </Heading>

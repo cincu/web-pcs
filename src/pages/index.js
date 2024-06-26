@@ -51,7 +51,7 @@ export default function Home() {
             priority
           />
           <p className={styles.intro}>
-            Welcome! I'm {cincu.name.substring(6, 11)}.&nbsp;
+            Welcome! I&apos;m {cincu.name.substring(6, 11)}.&nbsp;
           </p>
           <p>
             {highlightText(info, wordsToHighLight)}{" "}

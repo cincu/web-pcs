@@ -25,11 +25,11 @@ export default function ProjectAwareness() {
         <li>
           <strong>Reputation and Trust:</strong> Data breaches not only result
           in financial losses but also erode customer trust and tarnish the
-          reputation of organizations. In today's interconnected world, news of
-          a data breach spreads rapidly, leading to a loss of confidence among
-          customers, partners, and stakeholders. By prioritizing data security
-          education, companies demonstrate their commitment to safeguarding
-          sensitive information and preserving trust.{" "}
+          reputation of organizations. In today&apos;s interconnected world,
+          news of a data breach spreads rapidly, leading to a loss of confidence
+          among customers, partners, and stakeholders. By prioritizing data
+          security education, companies demonstrate their commitment to
+          safeguarding sensitive information and preserving trust.{" "}
         </li>
         <li>
           <strong>AI Tool Vulnerabilities:</strong> While AI tools offer
@@ -60,8 +60,8 @@ export default function ProjectAwareness() {
         </li>
         <li>
           Data Encryption: Encourage the use of encryption techniques to protect
-          sensitive data when it's in transit and at rest. This ensures that
-          even if data is accessed by AI tools, it remains unreadable to
+          sensitive data when it&apos;s in transit and at rest. This ensures
+          that even if data is accessed by AI tools, it remains unreadable to
           unauthorized parties.
         </li>
         <li>

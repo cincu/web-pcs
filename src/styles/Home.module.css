@@ -19,8 +19,24 @@
   max-width: 750px;
 }
 .leftAlignedText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   text-align: left;
   width: 100%;
+}
+.flagCode {
+  font-size: 1.2rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: blueviolet;
+}
+.highlightedCode {
+  padding: 1rem;
+  font-family: monospace;
+  border-radius: 0.22rem;
+  color: white;
+  background-color: black;
 }
 .projectHeading {
   margin: 2rem;
