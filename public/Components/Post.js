@@ -5,6 +5,7 @@ import { Heading, Badge, Stack, Text } from "@chakra-ui/react";
 import ProjectAwareness from "./ProjectAwareness";
 import ProjectPhish from "./ProjectPhish";
 import ProjectFlag from "./ProjectFlag";
+import ProjectNessus from "./ProjectNessus";
 
 export default function Post({ project }) {
   if (!project) {
@@ -17,6 +18,8 @@ export default function Post({ project }) {
       return <ProjectPhish />;
     } else if (title.includes("Flag")) {
       return <ProjectFlag />;
+    } else if (title.includes("Nessus")) {
+      return <ProjectNessus />;
     } else {
       return null;
     }
