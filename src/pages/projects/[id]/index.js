@@ -43,7 +43,6 @@ export default function ProjectDetailPage() {
           <title>oiloʇɟᴙoq</title>
         </Head>
         <main className={`${styles.main} ${inter.className}`}>
-          <Navbar />
           <Post project={project} />
         </main>
       </div>

@@ -14,7 +14,6 @@ export default function Projects() {
         <title> oiloʇɟᴙoq </title>
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Navbar />
         <Cards />
       </main>
     </div>
