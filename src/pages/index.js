@@ -40,7 +40,6 @@ export default function Home() {
         <title> oiloʇɟᴙoq </title>
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Navbar />
         <div className={styles.center}>
           <Image
             className={styles.logo}

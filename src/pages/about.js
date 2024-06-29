@@ -14,7 +14,6 @@ export default function About() {
         <title> oiloʇɟᴙoq </title>
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Navbar />
         <Cv />
         <Button className={styles.requestButton} colorScheme="blue">
           Request CV

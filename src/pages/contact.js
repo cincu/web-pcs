@@ -12,7 +12,6 @@ export default function Contact() {
         <title> oiloʇɟᴙoq </title>
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
-        <Navbar />
         <h2>Contact</h2>
       </main>
     </div>
