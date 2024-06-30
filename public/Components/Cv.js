@@ -29,11 +29,9 @@ export default function Cv() {
   return (
     <>
       {cincu.long.map((long, index) => (
-        <p key={index} className={styles.long}>
-          {long}
-        </p>
+        <p key={index}>{long}</p>
       ))}
-      <Accordion className={styles.accordion} defaultIndex={[0]} allowMultiple>
+      <Accordion defaultIndex={[0]} allowMultiple>
         <AccordionItem>
           <h2>
             <AccordionButton _expanded={{ bg: "grey", color: "white" }}>
