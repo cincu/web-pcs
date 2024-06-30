@@ -3,12 +3,16 @@ import { Box, Center, ChakraProvider, Container, Text } from "@chakra-ui/react";
 import useCincuStore from "@/store/useCincu";
 import Navbar from "../../public/Components/Navbar";
 export default function App({ Component, pageProps }) {
-  const { cincu, updateCincu } = useCincuStore();
   return (
     <ChakraProvider>
       <Box>
         <Navbar />
-        <Center as="main" w="100%" minH="100vh" p={3}>
+        <Center
+          as="main"
+          w="100%"
+          minH="100vh"
+          pt={{ base: "100px", md: "100px" }}
+        >
           <Container maxW="container.lg">
             <Component {...pageProps} />
           </Container>

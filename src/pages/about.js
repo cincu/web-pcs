@@ -13,13 +13,10 @@ export default function About() {
       <Head>
         <title> oiloʇɟᴙoq </title>
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <Cv />
-        <Button className={styles.requestButton} colorScheme="blue">
-          Request CV
-        </Button>{" "}
-        <div className={styles.center}></div>
-      </main>
+      <Cv />
+      <Button className={styles.requestButton} colorScheme="blue">
+        Request CV
+      </Button>{" "}
     </div>
   );
 }

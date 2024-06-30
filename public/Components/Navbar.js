@@ -1,10 +1,12 @@
-// components/Navbar.js
 import { useState } from "react";
+import styles from "@/styles/Home.module.css";
+
 import {
   Flex,
   Link as ChakraLink,
   IconButton,
   useBreakpointValue,
+  StylesProvider,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
@@ -27,23 +29,27 @@ export default function Navbar() {
     setActiveLink(path);
   };
 
-  const flexDirection = useBreakpointValue({ base: "column", md: "row" });
+  const bgColor = useBreakpointValue({
+    base: "rgba(255, 255, 255, 0.5)",
+    md: "white",
+  });
 
   return (
     <Flex
       as="nav"
       w="100%"
-      p={7}
+      h="6rem"
+      p={4}
       justifyContent="center"
-      bg="white"
+      bg={bgColor}
       position="fixed"
       top="0"
       zIndex="1000"
-      className="grid"
+      className={styles.grid}
     >
       <Flex
         w={{ base: "100%", md: "80%" }}
-        direction={flexDirection}
+        direction="row"
         alignItems="center"
         justifyContent="space-around"
       >

@@ -82,10 +82,10 @@
   justify-content: center;
   align-items: center;
 }
-
-.grid {
-  margin: 1rem;
-  display: flex;
+.grid:after {
+  content: "";
+  display: block;
+  height: 5rem;
 }
 .accordion {
   width: 60%;
@@ -110,11 +110,6 @@
 }
 .button {
   padding: 1rem 1.2rem;
-}
-.grid {
-  height: 3rem;
-  display: flex;
-  justify-content: center;
 }
 
 .active {

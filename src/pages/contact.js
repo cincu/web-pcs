@@ -11,9 +11,7 @@ export default function Contact() {
       <Head>
         <title> oiloʇɟᴙoq </title>
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <h2>Contact</h2>
-      </main>
+      <h2>Contact</h2>
     </div>
   );
 }

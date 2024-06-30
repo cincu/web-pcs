@@ -5,7 +5,6 @@ import styles from "@/styles/Home.module.css";
 import Head from "next/head";
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
-import Navbar from "@/../../public/Components/Navbar";
 import { useEffect, useState } from "react";
 import { Spinner, Text } from "@chakra-ui/react";
 
@@ -42,9 +41,7 @@ export default function ProjectDetailPage() {
         <Head>
           <title>oiloʇɟᴙoq</title>
         </Head>
-        <main className={`${styles.main} ${inter.className}`}>
-          <Post project={project} />
-        </main>
+        <Post project={project} />
       </div>
     </>
   );

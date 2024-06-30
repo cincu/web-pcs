@@ -13,9 +13,7 @@ export default function Projects() {
       <Head>
         <title> oiloʇɟᴙoq </title>
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <Cards />
-      </main>
+      <Cards />
     </div>
   );
 }
