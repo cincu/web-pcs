@@ -14,9 +14,6 @@ export default function About() {
         <title> portfolio </title>
       </Head>
       <Cv />
-      <Button className={styles.requestButton} colorScheme="blue">
-        Request CV
-      </Button>{" "}
     </div>
   );
 }

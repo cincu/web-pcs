@@ -29,8 +29,18 @@ export default function Cv() {
   return (
     <>
       {cincu.long.map((long, index) => (
-        <p key={index}>{long}</p>
-      ))}
+        <Box
+          key={index}
+          textAlign="center"
+          fontSize="xl"
+          margin="0 auto"
+          padding="1rem"
+        >
+          <p>{long}</p>
+        </Box>
+      ))}{" "}
+      <br></br>
+      <br></br>
       <Accordion defaultIndex={[0]} allowMultiple>
         <AccordionItem>
           <h2>
