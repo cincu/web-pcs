@@ -70,7 +70,12 @@ export default function Home() {
         alignItems="flex-start"
         overflow="hidden"
       >
-        <VStack maxH="100vh" align="center" justify="center" spacing={8}>
+        <VStack
+          maxH="100vh"
+          alignItems="center"
+          justifyItems="flex-start"
+          spacing={8}
+        >
           <MotionImage
             className={styles.logo}
             src="/images/imgccc.png"
