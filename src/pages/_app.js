@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
           minH="100vh"
           pt={{ base: "100px", md: "100px" }}
         >
-          <Container maxW="container.lg">
+          <Container maxW="container.xl">
             <Component {...pageProps} />
           </Container>
         </Center>

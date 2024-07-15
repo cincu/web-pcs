@@ -39,7 +39,7 @@ export default function ProjectDetailPage() {
     <>
       <div>
         <Head>
-          <title>oiloʇɟᴙoq</title>
+          <title>portfolio</title>
         </Head>
         <Post project={project} />
       </div>
