@@ -11,7 +11,7 @@ export default function About() {
   return (
     <div>
       <Head>
-        <title> oiloʇɟᴙoq </title>
+        <title> portfolio </title>
       </Head>
       <Cv />
       <Button className={styles.requestButton} colorScheme="blue">

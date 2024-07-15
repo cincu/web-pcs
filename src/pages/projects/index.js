@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <div>
       <Head>
-        <title> oiloʇɟᴙoq </title>
+        <title> portfolio </title>
       </Head>
       <Cards />
     </div>

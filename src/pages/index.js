@@ -51,7 +51,6 @@ export default function Home() {
 
   const { cincu, updateCincu } = useCincuStore();
   const info = cincu.info;
-  //TO CC: maybe also wordsToLowLight and make another class ex.code2, have a hierarchy in between 2 highlights
   const wordsToHighLight = [
     "web developer",
     "cyber-security",
@@ -61,28 +60,37 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title> oiloʇɟᴙoq </title>
+        <title> portfolio </title>
       </Head>
-      <VStack spacing={8}>
-        <MotionImage
-          className={styles.logo}
-          src="/images/imgccc.png"
-          alt="photo of the site owner"
-          width={200}
-          height={100}
-          priority
-          initial="hidden"
-          animate="visible"
-          variants={fadeInAnimation}
-        />
-        <Text fontSize="xxl" className={styles.intro}>
-          Welcome! I am {cincu.name.substring(6, 11)}.
-        </Text>
-        <MotionText fontSize="lg">
-          {highlightText(info, wordsToHighLight)}{" "}
-          <Link href="./about">Click for more </Link>
-        </MotionText>
-      </VStack>
+      <Box
+        w="100%"
+        h="100%"
+        display="flex"
+        justifyContent="center"
+        alignItems="flex-start"
+        overflow="hidden"
+      >
+        <VStack maxH="100vh" align="center" justify="center" spacing={8}>
+          <MotionImage
+            className={styles.logo}
+            src="/images/imgccc.png"
+            alt="photo of the site owner"
+            width={200}
+            height={100}
+            priority
+            initial="hidden"
+            animate="visible"
+            variants={fadeInAnimation}
+          />
+          <Text fontSize="xxl" className={styles.intro}>
+            Welcome! I am {cincu.name.substring(6, 11)}.
+          </Text>
+          <MotionText fontSize="lg">
+            {highlightText(info, wordsToHighLight)}{" "}
+            <Link href="./about">Click for more </Link>
+          </MotionText>
+        </VStack>
+      </Box>
     </>
   );
 }
