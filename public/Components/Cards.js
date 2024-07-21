@@ -52,7 +52,12 @@ export default function Cards() {
             </Box>
 
             <CardFooter mt="auto">
-              <Button project={project} as="a" href={`/projects/${project.id}`}>
+              <Button
+                project={project}
+                as="a"
+                href={`/projects/${project.id}`}
+                _hover={{ bg: "purple.600", color: "white" }}
+              >
                 View here
               </Button>{" "}
             </CardFooter>
