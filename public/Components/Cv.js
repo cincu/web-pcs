@@ -11,8 +11,12 @@ import {
   Text,
   Link,
   useColorModeValue,
+  UnorderedList,
+  ListItem,
+  ListIcon,
 } from "@chakra-ui/react";
 import useCincuStore from "@/store/useCincu";
+import { AddIcon } from "@chakra-ui/icons";
 
 export default function Cv() {
   const { about, cincu } = useCincuStore();
@@ -43,7 +47,7 @@ export default function Cv() {
           borderRadius="md"
           boxShadow="sm"
         >
-          <Text fontSize="l" textAlign="center">
+          <Text fontSize="l" textAlign="justify" lineHeight="2">
             {text}
           </Text>
         </Box>
@@ -60,11 +64,11 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ul>
+            <UnorderedList listStyleType="circle">
               {about.education.map((education, index) => (
                 <li key={index}>{education}</li>
               ))}
-            </ul>
+            </UnorderedList>
           </AccordionPanel>
         </AccordionItem>
 
@@ -78,11 +82,11 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ul>
+            <UnorderedList listStyleType="circle">
               {about.experience.map((experience, index) => (
-                <li key={index}>{experience}</li>
+                <ListItem key={index}>{experience}</ListItem>
               ))}
-            </ul>
+            </UnorderedList>
           </AccordionPanel>
         </AccordionItem>
 
@@ -96,9 +100,9 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ul>
+            <UnorderedList>
               {about.languages.map((language, index) => (
-                <li
+                <ListItem
                   key={index}
                   style={{
                     display: "flex",
@@ -112,9 +116,9 @@ export default function Cv() {
                     size="1.4rem"
                     color="purple.600"
                   />
-                </li>
+                </ListItem>
               ))}
-            </ul>
+            </UnorderedList>
           </AccordionPanel>
         </AccordionItem>
 
@@ -128,11 +132,11 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ul>
+            <UnorderedList listStyleType="circle">
               {about.voluntary.map((voluntary, index) => (
-                <li key={index}>{voluntary}</li>
+                <ListItem key={index}>{voluntary}</ListItem>
               ))}
-            </ul>
+            </UnorderedList>
           </AccordionPanel>
         </AccordionItem>
 
@@ -146,15 +150,15 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <ul>
+            <UnorderedList listStyleType="none">
               {about.references.map((reference, index) => (
-                <li key={index}>
+                <ListItem key={index}>
                   <Link href={reference} isExternal color="teal.500">
                     {reference}
                   </Link>
-                </li>
+                </ListItem>
               ))}
-            </ul>
+            </UnorderedList>
           </AccordionPanel>
         </AccordionItem>
       </Accordion>

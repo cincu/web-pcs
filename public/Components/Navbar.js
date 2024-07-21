@@ -70,7 +70,7 @@ export default function Navbar() {
           <ChevronLeftIcon
             aria-label="Home"
             boxSize={6}
-            _hover={{ color: "silver" }}
+            _hover={{ color: "purple.600" }}
             transition="color 0.3s"
           />
         </MotionLink>
@@ -85,13 +85,13 @@ export default function Navbar() {
           transition={{ type: "spring", stiffness: 300 }}
           _hover={{
             textDecoration: "none",
-            color: "silver",
+            color: "purple.600",
           }}
           p={4}
           display="flex"
           alignItems="center"
           justifyContent="center"
-          color={isActive("/about") ? "silver" : "black"}
+          color={isActive("/about") ? "purple.600" : "black"}
         >
           About
         </MotionLink>
@@ -106,13 +106,13 @@ export default function Navbar() {
           transition={{ type: "spring", stiffness: 300 }}
           _hover={{
             textDecoration: "none",
-            color: "silver",
+            color: "purple.600",
           }}
           p={4}
           display="flex"
           alignItems="center"
           justifyContent="center"
-          color={isActive("/projects") ? "silver" : "black"}
+          color={isActive("/projects") ? "purple.600" : "black"}
         >
           Projects
         </MotionLink>
@@ -127,13 +127,13 @@ export default function Navbar() {
           transition={{ type: "spring", stiffness: 300 }}
           _hover={{
             textDecoration: "none",
-            color: "silver",
+            color: "purple.600",
           }}
           p={4}
           display="flex"
           alignItems="center"
           justifyContent="center"
-          color={isActive("/contact") ? "silver" : "black"}
+          color={isActive("/contact") ? "purple.600" : "black"}
         >
           Contact
         </MotionLink>
