@@ -6,7 +6,6 @@ import {
   Link as ChakraLink,
   IconButton,
   useBreakpointValue,
-  StylesProvider,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
