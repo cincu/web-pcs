@@ -41,7 +41,9 @@ export default function ProjectDetailPage() {
         <Head>
           <title>portfolio</title>
         </Head>
-        <Post project={project} />
+        <div className={styles.centeredContainer}>
+          <Post project={project} />
+        </div>
       </div>
     </>
   );

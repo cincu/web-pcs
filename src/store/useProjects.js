@@ -92,7 +92,24 @@ const useProjectsStore = create((set, get) => ({
       ],
       subtitle:
         "The extensive notes on the crucial tool for network security; Network Mapper aim to gather different use-cases",
-      date: "04.2024",
+      date: "05.2024",
+    },
+    {
+      id: 6,
+      title: "Splunk Report",
+      background: "/images/id6.png",
+      banner: "/images/banner5.png",
+
+      tags: [
+        "log analysis",
+        "incident response",
+        "SIEM",
+        "security monitoring",
+        "Splunk",
+      ],
+      subtitle:
+        "Detailed investigation and analysis of an event using Splunk, focusing on the alert log to uncover potential security incidents",
+      date: "06.2024",
     },
   ],
   setProjects: (projects) => set({ projects }),
