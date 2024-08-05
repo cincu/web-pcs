@@ -25,7 +25,6 @@ export default async function handler(req, res) {
                  <p><strong>Message:</strong> ${message}</p>`,
         });
       } else if (formType === "requestResume") {
-        // Send CV request notification email to you
         await sendEmail({
           to: "ccansu.ccaner@gmail.com",
           subject: `New CV Request from ${name}`,
