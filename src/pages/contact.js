@@ -1,4 +1,6 @@
 import { useState } from "react";
+import styles from "@/styles/Home.module.css";
+
 import Head from "next/head";
 import {
   Box,
@@ -110,14 +112,23 @@ export default function Contact() {
           boxShadow="lg"
         >
           <VStack spacing={4} align="stretch">
-            <Text fontSize="2xl" fontWeight="bold" textAlign="center">
+            <Text
+              className={styles.title}
+              fontSize="2xl"
+              fontWeight="bold"
+              textAlign="center"
+            >
               Contact Me
             </Text>
-            <Text textAlign="center">
+            <Text className={styles.textRegular} textAlign="center">
               Feel free to reach out to me using the form below.
             </Text>
 
-            <RadioGroup onChange={setFormType} value={formType}>
+            <RadioGroup
+              fontFamily="Quicksand"
+              onChange={setFormType}
+              value={formType}
+            >
               <Stack direction="row" justifyContent="center">
                 <Radio value="contact">Contact Form</Radio>
                 <Radio value="requestResume">Request Resume</Radio>
@@ -125,7 +136,7 @@ export default function Contact() {
             </RadioGroup>
 
             <form onSubmit={handleSubmit}>
-              <VStack spacing={4}>
+              <VStack fontFamily="Quicksand" spacing={4}>
                 <FormControl id="name" isRequired>
                   <FormLabel>Name</FormLabel>
                   <Input
@@ -195,15 +206,22 @@ export default function Contact() {
 
             <Box textAlign="center" marginTop="4">
               <Box marginTop="4">
-                <Text fontSize="lg">You can connect with me:</Text>
+                <Text className={styles.textRegular} fontSize="lg">
+                  You can connect with me:
+                </Text>
                 <Link
+                  className={styles.textRegular}
                   href="https://www.linkedin.com/in/canan-cansu-caner"
                   isExternal
                 >
                   LinkedIn
                 </Link>{" "}
                 |{" "}
-                <Link href="https://github.com/cincu" isExternal>
+                <Link
+                  className={styles.textRegular}
+                  href="https://github.com/cincu"
+                  isExternal
+                >
                   GitHub
                 </Link>{" "}
               </Box>

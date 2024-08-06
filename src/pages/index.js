@@ -90,7 +90,7 @@ export default function Home() {
           <Text fontSize="xxl" className={styles.intro}>
             Welcome! I am {cincu.name.substring(6, 11)}.
           </Text>
-          <MotionText fontFamily="IBM Plex Sans" fontSize="lg">
+          <MotionText fontFamily="Quicksand" fontSize="lg">
             {highlightText(info, wordsToHighLight)}{" "}
             <Link href="./about">Click for more </Link>
           </MotionText>
