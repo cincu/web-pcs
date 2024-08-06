@@ -40,10 +40,11 @@ export default function Post({ project }) {
         as="h2"
         size="xl"
         noOfLines={1}
+        fontFamily="Quicksand"
       >
         Project {project.title}
       </Heading>
-      <Text className={styles.leftAlignedText}>
+      <Text fontFamily="Quicksand" className={styles.leftAlignedText}>
         {project.subtitle}, {project.date}
       </Text>
       <br />
@@ -55,13 +56,20 @@ export default function Post({ project }) {
         ))}
       </Stack>
       <br />
-      <Text as="i" className={styles.leftAlignedText}>
+      <Text fontFamily="Quicksand" as="i" className={styles.leftAlignedText}>
         {project.reference}
       </Text>
-      <Heading as="h3" size="lg" className={styles.projectSubtitle}>
+      <Heading
+        fontFamily="Quicksand"
+        as="h3"
+        size="lg"
+        className={styles.projectSubtitle}
+      >
         Why is this topic relevant?
       </Heading>
-      <Text className={styles.leftAlignedText}>{project.intro}</Text>
+      <Text fontFamily="Quicksand" className={styles.leftAlignedText}>
+        {project.intro}
+      </Text>
       <br></br>
       {renderProjectComponent(project.title)}
     </div>

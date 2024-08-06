@@ -1,12 +1,7 @@
 import { useState } from "react";
 import styles from "@/styles/Home.module.css";
 
-import {
-  Flex,
-  Link as ChakraLink,
-  IconButton,
-  useBreakpointValue,
-} from "@chakra-ui/react";
+import { Flex, Link as ChakraLink, useBreakpointValue } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -88,8 +83,10 @@ export default function Navbar() {
           }}
           p={4}
           display="flex"
+          fontFamily="Quicksand"
           alignItems="center"
           justifyContent="center"
+          fontWeight="600"
           color={isActive("/about") ? "purple.600" : "black"}
         >
           About
@@ -111,6 +108,8 @@ export default function Navbar() {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          fontFamily="Quicksand"
+          fontWeight="600"
           color={isActive("/projects") ? "purple.600" : "black"}
         >
           Projects
@@ -132,6 +131,8 @@ export default function Navbar() {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          fontFamily="Quicksand"
+          fontWeight="600"
           color={isActive("/contact") ? "purple.600" : "black"}
         >
           Contact

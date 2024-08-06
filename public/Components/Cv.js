@@ -6,17 +6,15 @@ import {
   AccordionIcon,
   Box,
   CircularProgress,
-  CircularProgressLabel,
   VStack,
   Text,
   Link,
-  useColorModeValue,
   UnorderedList,
   ListItem,
-  ListIcon,
 } from "@chakra-ui/react";
+import styles from "@/styles/Home.module.css";
+
 import useCincuStore from "@/store/useCincu";
-import { AddIcon } from "@chakra-ui/icons";
 
 export default function Cv() {
   const { about, cincu } = useCincuStore();
@@ -47,7 +45,12 @@ export default function Cv() {
           borderRadius="md"
           boxShadow="sm"
         >
-          <Text fontSize="l" textAlign="justify" lineHeight="2">
+          <Text
+            className={styles.textRegular}
+            fontSize="l"
+            textAlign="justify"
+            lineHeight="2"
+          >
             {text}
           </Text>
         </Box>
@@ -57,7 +60,7 @@ export default function Cv() {
         <AccordionItem>
           <h2>
             <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left" fontWeight="bold">
+              <Box className={styles.title} as="span" flex="1" textAlign="left">
                 Education
               </Box>
               <AccordionIcon />
@@ -66,7 +69,9 @@ export default function Cv() {
           <AccordionPanel pb={4}>
             <UnorderedList listStyleType="circle">
               {about.education.map((education, index) => (
-                <li key={index}>{education}</li>
+                <ListItem className={styles.textRegular} key={index}>
+                  {education}
+                </ListItem>
               ))}
             </UnorderedList>
           </AccordionPanel>
@@ -75,7 +80,7 @@ export default function Cv() {
         <AccordionItem>
           <h2>
             <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left" fontWeight="bold">
+              <Box className={styles.title} as="span" flex="1" textAlign="left">
                 Experience
               </Box>
               <AccordionIcon />
@@ -84,7 +89,9 @@ export default function Cv() {
           <AccordionPanel pb={4}>
             <UnorderedList listStyleType="circle">
               {about.experience.map((experience, index) => (
-                <ListItem key={index}>{experience}</ListItem>
+                <ListItem className={styles.textRegular} key={index}>
+                  {experience}
+                </ListItem>
               ))}
             </UnorderedList>
           </AccordionPanel>
@@ -93,7 +100,7 @@ export default function Cv() {
         <AccordionItem>
           <h2>
             <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left" fontWeight="bold">
+              <Box as="span" flex="1" textAlign="left" className={styles.title}>
                 Languages
               </Box>
               <AccordionIcon />
@@ -103,6 +110,7 @@ export default function Cv() {
             <UnorderedList>
               {about.languages.map((language, index) => (
                 <ListItem
+                  className={styles.textRegular}
                   key={index}
                   style={{
                     display: "flex",
@@ -125,7 +133,7 @@ export default function Cv() {
         <AccordionItem>
           <h2>
             <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left" fontWeight="bold">
+              <Box as="span" flex="1" textAlign="left" className={styles.title}>
                 Voluntary
               </Box>
               <AccordionIcon />
@@ -134,7 +142,9 @@ export default function Cv() {
           <AccordionPanel pb={4}>
             <UnorderedList listStyleType="circle">
               {about.voluntary.map((voluntary, index) => (
-                <ListItem key={index}>{voluntary}</ListItem>
+                <ListItem className={styles.textRegular} key={index}>
+                  {voluntary}
+                </ListItem>
               ))}
             </UnorderedList>
           </AccordionPanel>
@@ -143,7 +153,7 @@ export default function Cv() {
         <AccordionItem>
           <h2>
             <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
-              <Box as="span" flex="1" textAlign="left" fontWeight="bold">
+              <Box as="span" flex="1" textAlign="left" className={styles.title}>
                 References
               </Box>
               <AccordionIcon />
@@ -152,7 +162,7 @@ export default function Cv() {
           <AccordionPanel pb={4}>
             <UnorderedList listStyleType="none">
               {about.references.map((reference, index) => (
-                <ListItem key={index}>
+                <ListItem className={styles.textRegular} key={index}>
                   <Link href={reference} isExternal color="teal.500">
                     {reference}
                   </Link>

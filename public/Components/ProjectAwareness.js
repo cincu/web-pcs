@@ -4,7 +4,7 @@ import styles from "@/styles/Home.module.css";
 export default function ProjectAwareness() {
   return (
     <div>
-      <ol>
+      <ol className={styles.textRegular}>
         <li>
           <strong>Rising Threat Landscape:</strong> With each passing year, the
           threat landscape continues to expand, with cybercriminals deploying
@@ -48,38 +48,44 @@ export default function ProjectAwareness() {
           sensitive data, thereby strengthening the overall security posture.
         </li>
       </ol>
-      <Heading as="h4" size="md" className={styles.projectSubtitle}>
+      <Heading
+        fontFamily="Quicksand"
+        as="h4"
+        size="md"
+        className={styles.projectSubtitle}
+      >
         Important Points for the IT Department
       </Heading>
-      <ul>
+      <ul className={styles.textRegular}>
         <li>
-          Data Ownership Awareness: Emphasize the importance of understanding
-          data ownership within the organization. Ensure employees are aware
-          that the data they handle belongs to the company, and they must
-          exercise caution when sharing it with AI tools.
+          <strong>Data Ownership Awareness:</strong> Emphasize the importance of
+          understanding data ownership within the organization. Ensure employees
+          are aware that the data they handle belongs to the company, and they
+          must exercise caution when sharing it with AI tools.
         </li>
         <li>
-          Data Encryption: Encourage the use of encryption techniques to protect
-          sensitive data when it&apos;s in transit and at rest. This ensures
-          that even if data is accessed by AI tools, it remains unreadable to
-          unauthorized parties.
+          <strong>Data Encryption:</strong> Encourage the use of encryption
+          techniques to protect sensitive data when it&apos;s in transit and at
+          rest. This ensures that even if data is accessed by AI tools, it
+          remains unreadable to unauthorized parties.
         </li>
         <li>
-          Access Controls: Implement stringent access controls to limit the
-          exposure of sensitive data to only those employees who require it for
-          their job functions. Utilize role-based access control (RBAC)
-          mechanisms to enforce the principle of least privilege.
+          <strong>Access Controls:</strong> Implement stringent access controls
+          to limit the exposure of sensitive data to only those employees who
+          require it for their job functions. Utilize role-based access control
+          (RBAC) mechanisms to enforce the principle of least privilege.
         </li>
         <li>
-          Data Masking and Anonymization: Prioritize data masking and
-          anonymization techniques to obscure personally identifiable
-          information (PII) and other sensitive data before feeding it into AI
-          models. This reduces the risk of inadvertent exposure.
+          <strong>Data Masking and Anonymization:</strong> Prioritize data
+          masking and anonymization techniques to obscure personally
+          identifiable information (PII) and other sensitive data before feeding
+          it into AI models. This reduces the risk of inadvertent exposure.
         </li>
         <li>
-          Audit Trails: Implement robust audit trails to track the usage of
-          sensitive data by AI tools. This allows for retrospective analysis and
-          investigation in case of any suspected data leaks or breaches.
+          <strong>Audit Trails:</strong> Implement robust audit trails to track
+          the usage of sensitive data by AI tools. This allows for retrospective
+          analysis and investigation in case of any suspected data leaks or
+          breaches.
         </li>
       </ul>
     </div>

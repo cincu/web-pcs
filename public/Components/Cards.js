@@ -37,23 +37,24 @@ export default function Cards() {
                   alt={project.title}
                   width={200}
                   height={200}
-                />{" "}
+                />
               </Center>
 
-              <p className={styles.date}>{project.date}</p>
+              <Text className={styles.textRegular}>{project.date}</Text>
               <CardHeader>
-                <Heading size="md">{project.title}</Heading>
+                <Text className={styles.title}>{project.title}</Text>
               </CardHeader>
               <Divider />
 
               <CardBody>
-                <Text>{project.subtitle}</Text>
+                <Text className={styles.textRegular}>{project.subtitle}</Text>
               </CardBody>
             </Box>
 
             <CardFooter mt="auto">
               <Button
                 project={project}
+                className={styles.title}
                 as="a"
                 href={`/projects/${project.id}`}
                 _hover={{ bg: "purple.600", color: "white" }}

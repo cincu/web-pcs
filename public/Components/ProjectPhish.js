@@ -2,18 +2,17 @@ import { Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import { Text } from "@chakra-ui/react";
-import {
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { ListItem, UnorderedList } from "@chakra-ui/react";
 export default function ProjectPhish() {
   return (
     <div className={styles.leftAlignedText}>
       <ul>
-        <Heading as="h4" size="md" className={styles.projectSubtitle}>
+        <Heading
+          as="h4"
+          size="md"
+          className={styles.projectSubtitle}
+          fontFamily="Quicksand"
+        >
           Tools and services used in this project:
         </Heading>
         <li>Mailgun for mail server </li>
@@ -30,10 +29,20 @@ export default function ProjectPhish() {
           [Evilginx2 repo](https://github.com/kgretzky/evilginx2)
         </li>
       </ul>
-      <Heading as="h4" size="md" className={styles.projectSubtitle}>
+      <Heading
+        as="h4"
+        size="md"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Preparation
       </Heading>
-      <Heading as="h5" size="sm" className={styles.projectSubtitle}>
+      <Heading
+        as="h5"
+        size="sm"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         GoDaddy domain registry + DNS Records + Mailgun
       </Heading>
       <ul>
@@ -132,7 +141,12 @@ export default function ProjectPhish() {
       <Text as="cite">
         A screenshot of the set SMTP credentials in mailgun.{" "}
       </Text>
-      <Heading as="h5" size="sm" className={styles.projectSubtitle}>
+      <Heading
+        as="h5"
+        size="sm"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Google Cloud
       </Heading>
       <p>
@@ -194,7 +208,12 @@ export default function ProjectPhish() {
         purchased by GoDaddy, which is done through setting up the A record’s
         value as the external IP address of the vm instance.
       </p>
-      <Heading as="h4" size="md" className={styles.projectSubtitle}>
+      <Heading
+        as="h4"
+        size="md"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Setting up GoPhish
       </Heading>
       <p>
@@ -213,7 +232,12 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_7.png"
         alt="image"
       />{" "}
-      <Heading as="h5" size="sm" className={styles.projectSubtitle}>
+      <Heading
+        as="h5"
+        size="sm"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         TLS certificate
       </Heading>
       <p>
@@ -356,7 +380,12 @@ export default function ProjectPhish() {
         A screenshot of the progress of the phishing landing page mimicking
         O365.
       </Text>
-      <Heading as="h5" size="sm" className={styles.projectSubtitle}>
+      <Heading
+        as="h5"
+        size="sm"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Steps to harden the server
       </Heading>
       <ul>
@@ -443,7 +472,12 @@ export default function ProjectPhish() {
           mechanisms.
         </p>
       </ul>
-      <Heading as="h4" size="md" className={styles.projectSubtitle}>
+      <Heading
+        as="h4"
+        size="md"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Setting up Evilginx
       </Heading>
       <p>
@@ -522,7 +556,12 @@ export default function ProjectPhish() {
         Setting Up Domains for PhishletsEnsure firewall rules are adjusted as
         needed.
       </p>
-      <Heading as="h5" size="sm" className={styles.projectSubtitle}>
+      <Heading
+        as="h5"
+        size="sm"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Run and Manage Phishlets
       </Heading>
       <Image
@@ -560,7 +599,12 @@ export default function ProjectPhish() {
         src="/images/Phish/PSA_28.png"
         alt="image"
       />
-      <Heading as="h5" size="sm" className={styles.projectSubtitle}>
+      <Heading
+        as="h5"
+        size="sm"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Protecting Evilginx
       </Heading>
       <Text className={styles.highlightedCode}>$ blacklist unauth</Text>
@@ -568,7 +612,12 @@ export default function ProjectPhish() {
       <Text className={styles.highlightedCode}>
         $ $ config unauth_url redirectURL
       </Text>
-      <Heading as="h4" size="md" className={styles.projectSubtitle}>
+      <Heading
+        as="h4"
+        size="md"
+        className={styles.projectSubtitle}
+        fontFamily="Quicksand"
+      >
         Setting up EvilPhish
       </Heading>
       <p>
