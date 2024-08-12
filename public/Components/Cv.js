@@ -59,7 +59,10 @@ export default function Cv() {
       <Accordion allowMultiple>
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
+            <AccordionButton
+              _expanded={{ bg: "purple.600", color: "white" }}
+              style={{ borderRadius: "8px" }}
+            >
               <Box className={styles.title} as="span" flex="1" textAlign="left">
                 Education
               </Box>
@@ -79,7 +82,10 @@ export default function Cv() {
 
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
+            <AccordionButton
+              _expanded={{ bg: "purple.600", color: "white" }}
+              style={{ borderRadius: "8px" }}
+            >
               <Box className={styles.title} as="span" flex="1" textAlign="left">
                 Experience
               </Box>
@@ -99,7 +105,10 @@ export default function Cv() {
 
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
+            <AccordionButton
+              _expanded={{ bg: "purple.600", color: "white" }}
+              style={{ borderRadius: "8px" }}
+            >
               <Box as="span" flex="1" textAlign="left" className={styles.title}>
                 Languages
               </Box>
@@ -132,7 +141,10 @@ export default function Cv() {
 
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
+            <AccordionButton
+              style={{ borderRadius: "8px" }}
+              _expanded={{ bg: "purple.600", color: "white" }}
+            >
               <Box as="span" flex="1" textAlign="left" className={styles.title}>
                 Voluntary
               </Box>
@@ -152,7 +164,10 @@ export default function Cv() {
 
         <AccordionItem>
           <h2>
-            <AccordionButton _expanded={{ bg: "purple.600", color: "white" }}>
+            <AccordionButton
+              style={{ borderRadius: "8px" }}
+              _expanded={{ bg: "purple.600", color: "white" }}
+            >
               <Box as="span" flex="1" textAlign="left" className={styles.title}>
                 References
               </Box>

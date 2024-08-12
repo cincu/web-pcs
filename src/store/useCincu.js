@@ -11,10 +11,11 @@ const useCincuStore = create((set) => ({
   },
   about: {
     education: [
-      "High School Diploma in International Baccaloria",
-      "Bachelor of Architecture in Politecnico di Milano",
-      "Masters in Architecture and Urban Planning in Politecnico di Milano",
-      "Full Stack Web Development in Spiced Academy Berlin",
+      "2024 - Cyber Security Bootcamp, Masterschool, online, certification successful completion. IT basics ",
+      "2023 - Full Stack Web Development Bootcamp in Spiced Academy Berlin, certification upon successful completion. Group and individual work on 6 web applications using APIs. Deep knowledge gained over HTML, CSS, Javascript, ReactJS, MongoDB, Next. Final project for an artist, database, content management system, authentication log-in, application form and portfolio website development.",
+      "2021 - Masters in Architecture and Urban Planning in Politecnico di Milano, 103/110",
+      "2015 - Bachelor of Architecture in Politecnico di Milano, Bsc, 100/110",
+      "2012 - High School Diploma in International Baccalaureate, High Level in Economics, 39/43",
     ],
     experience: [
       "Designer and Execution Planner in Heim Balp Architekten, Berlin, 3 years",
