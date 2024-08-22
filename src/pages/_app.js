@@ -19,9 +19,7 @@ export default function App({ Component, pageProps }) {
         </Center>
       </Box>
       <Box as="footer" py={6} textAlign="center" w="100%">
-        <Text fontSize="sm">
-          © {new Date().getFullYear()} CCCM. All rights reserved.
-        </Text>
+        <Text fontSize="sm">© {new Date().getFullYear()} CCCM</Text>
       </Box>
     </ChakraProvider>
   );

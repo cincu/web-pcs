@@ -6,7 +6,7 @@ import ProjectAwareness from "./ProjectAwareness";
 import ProjectPhish from "./ProjectPhish";
 import ProjectFlag from "./ProjectFlag";
 import ProjectNessus from "./ProjectNessus";
-
+import ProjectSplunk from "./ProjectSplunk";
 export default function Post({ project }) {
   if (!project) {
     return <p>No project data available!</p>;
@@ -20,6 +20,8 @@ export default function Post({ project }) {
       return <ProjectFlag />;
     } else if (title.includes("Nessus")) {
       return <ProjectNessus />;
+    } else if (title.includes("Splunk")) {
+      return <ProjectSplunk />;
     } else {
       return null;
     }

@@ -98,7 +98,7 @@ const useProjectsStore = create((set, get) => ({
       id: 6,
       title: "Splunk Report",
       background: "/images/id6.png",
-      banner: "/images/banner5.png",
+      banner: "/images/banner6.png",
 
       tags: [
         "log analysis",
