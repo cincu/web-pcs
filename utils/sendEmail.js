@@ -11,7 +11,6 @@ export async function sendEmail({ to, subject, text, html, attachments }) {
     },
   });
 
-  // Send mail with the defined transport object
   let info = await transporter.sendMail({
     from: `"Canan Cansu Caner" <${process.env.EMAIL_USER}>`,
     to: to,

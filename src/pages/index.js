@@ -1,13 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import useCincuStore from "@/store/useCincu";
 import Link from "next/link";
 import { Box, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
 const MotionText = motion(Text);
 const MotionImage = motion(Image);
 
@@ -16,6 +15,21 @@ const fadeInAnimation = {
   visible: { opacity: 1, transition: { duration: 3 } },
 };
 export default function Home() {
+  useEffect(() => {
+    async function sendIP() {
+      try {
+        const response = await fetch("/api/sendIP", {
+          method: "POST",
+        });
+        const data = await response.json();
+        console.log(data.message);
+      } catch (error) {
+        console.error("Error sending IP:", error);
+      }
+    }
+    sendIP();
+  }, []);
+
   function highlightText(text, words) {
     const regex = new RegExp(`(${words.join("|")})`, "gi");
     const parts = text.split(regex);
