@@ -1,40 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Personal Website
+Welcome to the repository for my personal portfolio website! This site is designed to showcase my work, skills, and expertise in the fields of cybersecurity and web development. It serves as a comprehensive platform where you can learn more about me, explore my projects, and easily get in touch.
 
-## Getting Started
+🛠️ Tech Stack
+This portfolio is built using a modern and efficient tech stack to ensure a smooth, responsive, and dynamic user experience:
 
-First, run the development server:
+React.js: Core framework for building the interactive user interface.
+Next.js: Used for server-side rendering, routing, and optimized performance.
+Chakra UI: Provides a modular and accessible component library for quick styling and customization.
+Zustand: Lightweight state management library for handling global state.
+JavaScript (ES6+): The primary programming language for building functionality.
+🎨 Features
+Detailed About Me Section: Go beyond the typical CV with an in-depth look at my background, experiences, and the journey that led me to my current role in cybersecurity and web development.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Projects Page: Explore a curated selection of my work, featuring both cybersecurity and web development projects. Each project is showcased with detailed descriptions, technologies used, and, where applicable, live demos or code repositories.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Contact Page: Visitors can easily get in touch with me through a contact form. Additionally, there's an option to request my CV directly from the site.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+🚀 Getting Started
+Prerequisites
+To run this project locally, ensure you have the following installed:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Node.js
+npm or yarn (Node Package Manager)
