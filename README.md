@@ -4,10 +4,15 @@ Welcome to the repository for my personal portfolio website! This site is design
 This portfolio is built using a modern and efficient tech stack to ensure a smooth, responsive, and dynamic user experience:
 
 React.js: Core framework for building the interactive user interface.
+
 Next.js: Used for server-side rendering, routing, and optimized performance.
+
 Chakra UI: Provides a modular and accessible component library for quick styling and customization.
+
 Zustand: Lightweight state management library for handling global state.
+
 JavaScript (ES6+): The primary programming language for building functionality.
+
 🎨 ## Features
 Detailed About Me Section: Go beyond the typical CV with an in-depth look at my background, experiences, and the journey that led me to my current role in cybersecurity and web development.
 
