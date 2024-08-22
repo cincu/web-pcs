@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Box, Text, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+import ConsentModal from "../../public/Components/ConsentModal";
 
 const MotionText = motion(Text);
 const MotionImage = motion(Image);
@@ -15,21 +16,17 @@ const fadeInAnimation = {
   visible: { opacity: 1, transition: { duration: 3 } },
 };
 export default function Home() {
-  useEffect(() => {
-    async function sendIP() {
-      try {
-        const response = await fetch("/api/sendIP", {
-          method: "POST",
-        });
-        const data = await response.json();
-        console.log(data.message);
-      } catch (error) {
-        console.error("Error sending IP:", error);
-      }
+  const handleConsent = async () => {
+    try {
+      const response = await fetch("/api/sendIP", {
+        method: "POST",
+      });
+      const data = await response.json();
+      console.log(data.message);
+    } catch (error) {
+      console.error("Error sending IP:", error);
     }
-    sendIP();
-  }, []);
-
+  };
   function highlightText(text, words) {
     const regex = new RegExp(`(${words.join("|")})`, "gi");
     const parts = text.split(regex);
@@ -110,6 +107,7 @@ export default function Home() {
           </MotionText>
         </VStack>
       </Box>
+      <ConsentModal onConsent={handleConsent} />
     </>
   );
 }
