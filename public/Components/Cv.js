@@ -72,9 +72,11 @@ export default function Cv() {
           <AccordionPanel pb={4}>
             <UnorderedList listStyleType="circle">
               {about.education.map((education, index) => (
-                <ListItem className={styles.textRegular} key={index}>
-                  {education}
-                </ListItem>
+                <ListItem
+                  className={styles.textRegular}
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: education }}
+                />
               ))}
             </UnorderedList>
           </AccordionPanel>
@@ -95,9 +97,11 @@ export default function Cv() {
           <AccordionPanel pb={4}>
             <UnorderedList listStyleType="circle">
               {about.experience.map((experience, index) => (
-                <ListItem className={styles.textRegular} key={index}>
-                  {experience}
-                </ListItem>
+                <ListItem
+                  className={styles.textRegular}
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: experience }}
+                />
               ))}
             </UnorderedList>
           </AccordionPanel>

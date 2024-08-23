@@ -41,10 +41,9 @@ const ConsentModal = ({ onConsent }) => {
         <ModalHeader>Privacy Notice</ModalHeader>
         <ModalBody>
           <Text>
-            I use cookies and other tracking technologies to improve your
-            browsing experience on my website. By clicking Accept, you consent
-            to my use of tracking technologies, including the collection of your
-            IP address. Thank you for visiting my website!
+            This website uses cookies and other tracking technologies to improve
+            browsing experience. By clicking Accept, you consent to the use of
+            tracking technologies.
           </Text>
         </ModalBody>
         <ModalFooter>

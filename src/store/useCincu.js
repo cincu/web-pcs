@@ -11,16 +11,16 @@ const useCincuStore = create((set) => ({
   },
   about: {
     education: [
-      "2024 - Cyber Security Bootcamp, Masterschool, online, certification successful completion. IT basics ",
-      "2023 - Full Stack Web Development Bootcamp in Spiced Academy Berlin, certification upon successful completion. Group and individual work on 6 web applications using APIs. Deep knowledge gained over HTML, CSS, Javascript, ReactJS, MongoDB, Next. Final project for an artist, database, content management system, authentication log-in, application form and portfolio website development.",
-      "2021 - Masters in Architecture and Urban Planning in Politecnico di Milano, 103/110",
-      "2015 - Bachelor of Architecture in Politecnico di Milano, Bsc, 100/110",
-      "2012 - High School Diploma in International Baccalaureate, High Level in Economics, 39/43",
+      "<strong>2024 - Cyber Security Bootcamp, Masterschool, online, certification successful completion.</strong> <br><strong>Hands-On Skill Development</strong> </br>Immersed in networking, operating systems, and Python programming, complemented by participation in industry-aligned projects. <br><strong>Certification Preparation</br></strong> Focused training for the CompTIA Security+ (SY0-701) exam, enhancing skills in security analytics with Splunk and mastering firewall administration. <br><strong>Strategic Security Frameworks</br></strong> Delved into applying the MITRE ATT&CK framework, ensuring compliance with ISO 27001:2013, and fortifying TCP/IP security protocols.<br><strong>IT Support Expertise</strong> </br>Cultivated a robust foundation in IT support, including in-depth training on Windows 10 and 11, network troubleshooting techniques, and essential help desk operations ",
+      "<strong>2023 - Full Stack Web Development Bootcamp in Spiced Academy Berlin, certification upon successful completion</strong> Group and individual work on 6 web applications using APIs. Deep knowledge gained over HTML, CSS, Javascript, ReactJS, MongoDB, Next. Final project for an artist, database, content management system, authentication log-in, application form and portfolio website development.",
+      "<strong>2021 - Masters in Architecture and Urban Planning in Politecnico di Milano, 103/110 </strong> <br/>During my Master’s in Architecture and Urban Design at Politecnico di Milano, I engaged in both urban design studies and building technology studios, which enhanced my understanding of sustainable architecture and urban environments. I participated in a reconstruction project in Frankfurt, where I worked on revitalizing urban spaces that were once bombed in the second world war, and in a building preservation project in China, focusing on preserving historical structures, exploring traditional building methods, as well as projects in Milan. Additionally, I successfully completed a semester-long Revit course, gaining proficiency in this essential architectural software. ",
+      "<strong>2015 - Bachelor of Architecture in Politecnico di Milano, Bsc, 100/110 </strong>",
+      "<strong>2012 - High School Diploma in International Baccalaureate, High Level in Economics, 39/43 </strong>",
     ],
     experience: [
-      "Designer and Execution Planner in Heim Balp Architekten, Berlin, 3 years",
-      "Architectural Designer in Atolye Kolektif, Istanbul, 1 year",
-      "Quantity Surveyor and tender-bid preperation, Atlas Construction, Istanbul, 1 year",
+      "<strong>Designer and Execution Planner in Heim Balp Architekten, Berlin, 3 years </strong> <br/>Specialized in producing technical drawings for construction in a 15-person office, I participated primarily in projects based in Berlin and Milan. Over three years, I gained proficiency in Vectorworks, a BIM software, becoming the go-to person for troubleshooting and optimizing its integration into the workflow. <br/> One major project was an industrial conversion in Berlin, where I contributed to transforming an old industrial site into a multifunctional space for industry, coworking, and business. <br/>Another significant project involved managing a factory building with office spaces in Milan, from building phases 1-5.<br/>Additionally, I worked on numerous smaller residential projects and handled building permit application preparations. My role involved close collaboration with colleagues, assisting and teaching them to enhance efficiency. ",
+      "<strong>Architectural Designer in Atolye Kolektif, Istanbul, 1 year</strong> <br/>",
+      "<strong>Quantity Surveyor and tender-bid preperation, Atlas Construction, Istanbul, 1 year</strong> <br/>",
     ],
     languages: ["Turkish", "English", "German", "Italian"],
     voluntary: [
