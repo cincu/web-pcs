@@ -5,7 +5,6 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
-  CircularProgress,
   VStack,
   Text,
   Link,
@@ -19,20 +18,6 @@ import useCincuStore from "@/store/useCincu";
 export default function Cv() {
   const { about, cincu } = useCincuStore();
   const long = cincu.long;
-
-  function getProgressValue(language) {
-    switch (language.toLowerCase()) {
-      case "turkish":
-      case "english":
-        return 100;
-      case "german":
-        return 50;
-      case "italian":
-        return 40;
-      default:
-        return 10;
-    }
-  }
 
   return (
     <VStack spacing={8} align="stretch">
@@ -70,7 +55,7 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <UnorderedList listStyleType="circle">
+            <UnorderedList listStyleType="'+ '">
               {about.education.map((education, index) => (
                 <ListItem
                   className={styles.textRegular}
@@ -95,7 +80,7 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <UnorderedList listStyleType="circle">
+            <UnorderedList listStyleType="'+ '">
               {about.experience.map((experience, index) => (
                 <ListItem
                   className={styles.textRegular}
@@ -120,24 +105,13 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <UnorderedList>
+            <UnorderedList listStyleType="none">
               {about.languages.map((language, index) => (
                 <ListItem
                   className={styles.textRegular}
                   key={index}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  {language}
-                  <CircularProgress
-                    value={getProgressValue(language)}
-                    size="1.4rem"
-                    color="purple.600"
-                  />
-                </ListItem>
+                  dangerouslySetInnerHTML={{ __html: language }}
+                />
               ))}
             </UnorderedList>
           </AccordionPanel>
@@ -156,11 +130,13 @@ export default function Cv() {
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-            <UnorderedList listStyleType="circle">
+            <UnorderedList listStyleType="'+ '">
               {about.voluntary.map((voluntary, index) => (
-                <ListItem className={styles.textRegular} key={index}>
-                  {voluntary}
-                </ListItem>
+                <ListItem
+                  className={styles.textRegular}
+                  key={index}
+                  dangerouslySetInnerHTML={{ __html: voluntary }}
+                />
               ))}
             </UnorderedList>
           </AccordionPanel>

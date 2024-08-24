@@ -18,15 +18,19 @@ const useCincuStore = create((set) => ({
       "<strong>2012 - High School Diploma in International Baccalaureate, High Level in Economics, 39/43 </strong>",
     ],
     experience: [
-      "<strong>Designer and Execution Planner in Heim Balp Architekten, Berlin, 3 years </strong> <br/>Specialized in producing technical drawings for construction in a 15-person office, I participated primarily in projects based in Berlin and Milan. Over three years, I gained proficiency in Vectorworks, a BIM software, becoming the go-to person for troubleshooting and optimizing its integration into the workflow. <br/> One major project was an industrial conversion in Berlin, where I contributed to transforming an old industrial site into a multifunctional space for industry, coworking, and business. <br/>Another significant project involved managing a factory building with office spaces in Milan, from building phases 1-5.<br/>Additionally, I worked on numerous smaller residential projects and handled building permit application preparations. My role involved close collaboration with colleagues, assisting and teaching them to enhance efficiency. ",
+      "<strong>Designer and Execution Planner in Heim Balp Architekten, Berlin, 3 years </strong> <br/>Specialized in producing technical drawings for construction in a 15-person office, I participated primarily in projects based in Berlin and Milan. Over three years, I gained proficiency in Vectorworks, a BIM software, becoming the go-to person for troubleshooting and optimizing its integration into the workflow. <br/> One major project was an industrial conversion in Berlin, where I contributed to transforming an old industrial site into a multifunctional space for industry, coworking, and business. <br/>Another significant project involved managing a factory building with office spaces in Milan, from building phases 1-5.<br/>Additionally, I worked on numerous smaller residential projects and handled building permit application preparations. My role involved close collaboration with colleagues, assisting and teaching them to enhance efficiency.  ",
       "<strong>Architectural Designer in Atolye Kolektif, Istanbul, 1 year</strong> <br/>",
       "<strong>Quantity Surveyor and tender-bid preperation, Atlas Construction, Istanbul, 1 year</strong> <br/>",
     ],
-    languages: ["Turkish", "English", "German", "Italian"],
+    languages: [
+      "Turkish, native speaker",
+      "English, C2 level",
+      "German, B1 level",
+      "Italian",
+    ],
     voluntary: [
-      "Infographics, content creation and other various voluntary work in Puduhepa, Berlin, since 2021",
-      "Voluntary work with stray dogs, Kurtkoy Patileri, Istanbul, since 2017 and on and off other organizations",
-      "Studies in Urban political ecology",
+      "<strong>Puduhepa, Berlin, 2021 </strong> - ... <br/> Bi-monthly infographics for social media page, content creation and other various organizational work for migrant women",
+      "<strong>Various organizations such as Kurtkoy Patileri and PetsinTurkey, 2017 - ... </strong> <br/> Feeding stray dogs, organizing donations, raising awareness, helping with logistics in adoption processes",
     ],
     references: [
       "https://github.com/cincu",
