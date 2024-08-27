@@ -1,4 +1,3 @@
-// components/Post.js
 import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import { Heading, Badge, Stack, Text } from "@chakra-ui/react";
@@ -7,6 +6,7 @@ import ProjectPhish from "./ProjectPhish";
 import ProjectFlag from "./ProjectFlag";
 import ProjectNessus from "./ProjectNessus";
 import ProjectSplunk from "./ProjectSplunk";
+
 export default function Post({ project }) {
   if (!project) {
     return <p>No project data available!</p>;

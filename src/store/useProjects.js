@@ -74,7 +74,7 @@ const useProjectsStore = create((set, get) => ({
         "The write-up 'Vulnerability Scan' is a beginner's guide to set-up, utilize and analyze the results of the powerful tool Nessus",
       date: "04.2024",
       intro: [
-        " Participating in a Nessus vulnerability scan is an invaluable exercise for anyone looking to enhance their cybersecurity skills. This task helps you become proficient in identifying potential security weaknesses across various systems. By using Nessus, you learn to scan networks and applications for vulnerabilities, interpret scan results, and prioritize remediation efforts. This hands-on experience provides practical knowledge essential for protecting sensitive information and maintaining robust security postures. Engaging in Nessus vulnerability scanning is crucial for preparing to tackle real-world cybersecurity challenges and ensuring the integrity and safety of digital infrastructures.",
+        "Participating in a Nessus vulnerability scan is an essential exercise for enhancing cybersecurity skills. This task enables proficiency in identifying potential security weaknesses across various systems. Through the use of Nessus, networks and applications are scanned for vulnerabilities, scan results are interpreted, and remediation efforts are prioritized. This hands-on experience provides practical knowledge crucial for protecting sensitive information and maintaining robust security postures. Engaging in Nessus vulnerability scanning is vital for preparing to address real-world cybersecurity challenges and ensuring the integrity and safety of digital infrastructures.",
       ],
     },
     {
