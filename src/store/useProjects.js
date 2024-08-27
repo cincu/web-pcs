@@ -52,7 +52,7 @@ const useProjectsStore = create((set, get) => ({
       banner: "/images/banner3.png",
       tags: ["Linux", "Encryption", "Hashing", "File Systems", "NMAP"],
       subtitle:
-        "The write-up collects steps and tricks used to tackle the CTF room that is developed to explore Linux environments in depth",
+        "The write-up details steps and tricks used to tackle a challenging CTF room, meticulously designed to explore Linux environments in depth",
       date: "04.2024",
       intro: [
         "Participating in a Linux Capture the Flag (CTF) task is a crucial exercise for anyone looking to improve their cybersecurity skills. This task helps you become proficient in navigating the Linux environment, uncovering hidden flags, and using hash functions for data verification. It also covers the basics of encryption, providing practical knowledge for protecting sensitive information. This hands-on experience is essential for preparing to tackle real-world cybersecurity challenges.",
@@ -91,8 +91,11 @@ const useProjectsStore = create((set, get) => ({
         "nmap scripts",
       ],
       subtitle:
-        "The extensive notes on the crucial tool for network security; Network Mapper aim to gather different use-cases",
+        "Extensive notes on the vital network security tool, Network Mapper, aim to gather various use cases, practical insights, and expert recommendations.",
       date: "05.2024",
+      intro: [
+        "Extensive notes on Nmap are crucial because they provide a deep understanding of this powerful network security tool, essential for accurately identifying vulnerabilities, ensuring compliance, and troubleshooting complex network issues. These notes serve as a valuable resource for both learning and professional use, enabling users to fully leverage Nmap's features, customize scripts, and share knowledge within a team, ultimately enhancing the security and efficiency of network management.",
+      ],
     },
     {
       id: 6,

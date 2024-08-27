@@ -2,8 +2,6 @@ import { Box, Button, Code, Heading } from "@chakra-ui/react";
 import styles from "@/styles/Home.module.css";
 import { Text } from "@chakra-ui/react";
 import { ListItem, UnorderedList } from "@chakra-ui/react";
-import Image from "next/image";
-import { ChevronDownIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 export default function ProjectNessus() {
   const [showContents, setShowContents] = useState(false);

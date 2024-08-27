@@ -368,8 +368,8 @@ export default function ProjectFlag() {
         src="/images/Flag/FLA24.png"
         alt="image"
       />
-      <Heading as="h4" size="md" className={styles.projectSubtitle}>
-        FINDINGS
+      <Heading as="h4" size="lg" className={styles.projectSubtitle}>
+        Findings
       </Heading>
       <UnorderedList>
         <ListItem>
