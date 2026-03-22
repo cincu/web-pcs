@@ -102,7 +102,7 @@ export default function Home() {
             Welcome! I am {cincu.name.substring(6, 11)}.
           </Text>
           <MotionText fontFamily="Quicksand" fontSize="lg">
-            and this site is intentionally down.
+            and this site is down by choice xx
           </MotionText>
         </VStack>
       </Box>
