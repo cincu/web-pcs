@@ -102,8 +102,7 @@ export default function Home() {
             Welcome! I am {cincu.name.substring(6, 11)}.
           </Text>
           <MotionText fontFamily="Quicksand" fontSize="lg">
-            {highlightText(info, wordsToHighLight)}{" "}
-            <Link href="./about">Click for more </Link>
+            and this site is intentionally down.
           </MotionText>
         </VStack>
       </Box>

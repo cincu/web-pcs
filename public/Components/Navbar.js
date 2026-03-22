@@ -69,7 +69,7 @@ export default function Navbar() {
           />
         </MotionLink>
         <MotionLink
-          href="/about"
+          href="/"
           className={isActive("/about")}
           onClick={() => handleLinkClick("/about")}
           animate={{
@@ -92,7 +92,7 @@ export default function Navbar() {
           About
         </MotionLink>
         <MotionLink
-          href="/projects"
+          href="/"
           className={isActive("/projects")}
           onClick={() => handleLinkClick("/projects")}
           animate={{
@@ -115,7 +115,7 @@ export default function Navbar() {
           Projects
         </MotionLink>
         <MotionLink
-          href="/contact"
+          href="/"
           className={isActive("/contact")}
           onClick={() => handleLinkClick("/contact")}
           animate={{
